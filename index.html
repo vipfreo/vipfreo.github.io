@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩漫画-韩漫画大全与阅读指南</title>
+    <meta name="description" content="韩漫画大全与阅读指南，为您全面介绍韩漫画的风格特点、热门类型、阅读平台推荐、常见术语解析以及新手指南，帮助您快速找到心仪的韩漫作品。">
+    <meta name="keywords" content="韩漫画,韩漫,韩国漫画,漫画推荐,韩漫阅读,韩漫平台,韩漫类型,条漫">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f7fc;
+            color: #1f1f2e;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5b4bd6;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #3f2fa8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        .site-header {
+            background: linear-gradient(135deg, #1e1b3a 0%, #2d2658 100%);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .main-nav a {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffd166;
+        }
+
+        /* 首屏 */
+        .hero {
+            background: linear-gradient(145deg, #f0edff 0%, #e6e1fa 100%);
+            padding: 60px 0 50px;
+            border-bottom: 1px solid #e0daf2;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #1e1b3a;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #3c365a;
+            max-width: 720px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .hero-tag {
+            background: #ffffff;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #4a3f9e;
+            box-shadow: 0 2px 8px rgba(70, 50, 150, 0.08);
+            border: 1px solid #dcd4f5;
+        }
+
+        /* 内容区块 */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-alt {
+            background-color: #ffffff;
+            border-top: 1px solid #eee9f7;
+            border-bottom: 1px solid #eee9f7;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1e1b3a;
+            margin-bottom: 12px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            border-radius: 4px;
+        }
+
+        .section-subtitle {
+            color: #5a5478;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .section-title-center {
+            text-align: center;
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #ede9f5;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(80, 60, 180, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: #2c2850;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: #4a4665;
+            font-size: 0.98rem;
+        }
+
+        /* 列表样式 */
+        .styled-list {
+            list-style: none;
+            margin: 10px 0 0;
+        }
+
+        .styled-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #e0daf2;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .styled-list li::before {
+            content: "▸";
+            color: #6c5ce7;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* 步骤 */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+            counter-reset: step-counter;
+        }
+
+        .step-item {
+            background: #f3f0fd;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            border: 1px solid #e3dcf8;
+        }
+
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #6c5ce7;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(108,92,231,0.4);
+        }
+
+        .step-item h3 {
+            margin-top: 15px;
+            font-size: 1.15rem;
+            color: #2c2850;
+        }
+
+        .step-item p {
+            color: #4a4665;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        /* 两栏布局 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 术语表 */
+        .glossary-item {
+            background: #faf9ff;
+            border-left: 4px solid #6c5ce7;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 15px;
+        }
+
+        .glossary-item h3 {
+            font-size: 1.1rem;
+            color: #2c2850;
+            margin-bottom: 4px;
+        }
+
+        .glossary-item p {
+            color: #4a4665;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid #ece7f6;
+        }
+
+        .faq-item h3 {
+            color: #2c2850;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            cursor: default;
+        }
+
+        .faq-item p {
+            color: #4a4665;
+        }
+
+        /* 相关推荐 */
+        .related-panel {
+            background: linear-gradient(145deg, #ffffff, #f6f3ff);
+            border: 1px solid #e0d8f5;
+            border-radius: 18px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .related-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .related-tag {
+            background: #ece6fd;
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #3f2fa8;
+            transition: all 0.2s;
+        }
+
+        .related-tag:hover {
+            background: #6c5ce7;
+            color: #fff;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #1e1b3a;
+            padding: 40px 0 25px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .footer-brand span {
+            color: #ffd166;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .main-nav ul {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+            }
+            .hero {
+                padding: 40px 0;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 22px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">韩漫画<span>.</span></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#intro">韩漫介绍</a></li>
+                <li><a href="#types">热门类型</a></li>
+                <li><a href="#platforms">阅读平台</a></li>
+                <li><a href="#guide">新手入门</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏 -->
+    <section class="hero" id="intro">
+        <div class="container hero-content">
+            <h1>韩漫画</h1>
+            <p>韩漫画通常指韩国创作并发行的漫画作品，如今多指采用纵向滚动阅读的“条漫”形式。凭借精致的画风、贴近生活的剧情和独特的叙事节奏，韩漫在全球范围内积累了庞大的读者群体。本指南将带您全面了解韩漫画的方方面面。</p>
+            <div class="hero-tags">
+                <span class="hero-tag">🎨 精美画风</span>
+                <span class="hero-tag">📱 手机阅读</span>
+                <span class="hero-tag">📚 题材丰富</span>
+                <span class="hero-tag">🔥 人气作品</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 韩漫特点 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">韩漫画有哪些独特风格？</h2>
+            <p class="section-subtitle">了解韩漫的鲜明特质，有助于更快找到符合您口味的作品。</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon">📱</span>
+                    <h3>条漫式阅读</h3>
+                    <p>绝大多数韩漫采用竖屏长条布局，专为手机优化，滑动阅读流畅自然。与传统页漫相比，条漫更强调节奏感和沉浸式体验。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎬</span>
+                    <h3>影视化分镜</h3>
+                    <p>韩漫的画面构图常借鉴影视语言，运用景别变化、留白和连续动作描绘，让静态画面富有动态张力，叙事效率高。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🌈</span>
+                    <h3>上色精致</h3>
+                    <p>彩色是韩漫的常态。韩漫整体色彩搭配协调，多用柔和光影与时尚配色，尤其擅长塑造人物氛围和场景情绪。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">✍️</span>
+                    <h3>题材大胆</h3>
+                    <p>从校园恋爱到职场现实，从奇幻穿越到悬疑惊悚，韩漫的题材覆盖面极广，且较敢于探讨成人向、社会向话题。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门类型 -->
+    <section class="section section-alt" id="types">
+        <div class="container">
+            <h2 class="section-title">韩漫画热门类型盘点</h2>
+            <p class="section-subtitle">不同读者偏好不同题材，以下类型长期占据韩漫人气榜单。</p>
+            <div class="two-col">
+                <div>
+                    <ul class="styled-list">
+                        <li><strong>浪漫爱情：</strong>韩漫的绝对主力类型，包含校园恋爱、办公室恋情、契约婚姻等经典设定，画风甜美，情感细腻。</li>
+                        <li><strong>奇幻穿越：</strong>主角穿越到小说或游戏世界，凭借“预知”逆天改命，代表作频出，爽点密集。</li>
+                        <li><strong>惊悚悬疑：</strong>心理博弈、连环案件、无限流生存，节奏紧张，反转不断，适合喜欢烧脑剧情的读者。</li>
+                        <li><strong>动作热血：</strong>融合格斗、异能、复仇等元素，打击感强，分镜冲击力十足。</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="styled-list">
+                        <li><strong>日常治愈：</strong>聚焦普通人的生活琐碎，画风清新，剧情温暖，适合放松心情时阅读。</li>
+                        <li><strong>BL / GL：</strong>韩漫在多元恋爱题材上表现突出，拥有大量忠实读者，制作精良且叙事成熟。</li>
+                        <li><strong>现实题材：</strong>关注社会议题、职场压力与人性挣扎，容易引发读者强烈共鸣。</li>
+                        <li><strong>搞笑沙雕：</strong>无厘头笑点与夸张演出并行，是解压刷漫的绝佳选择。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读平台与渠道 -->
+    <section class="section" id="platforms">
+        <div class="container">
+            <h2 class="section-title">在哪里可以阅读韩漫画？</h2>
+            <p class="section-subtitle">正规渠道是获得良好阅读体验与支持创作者的最佳方式。</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon">🇰🇷</span>
+                    <h3>韩国本土平台</h3>
+                    <p>Naver Webtoon、Kakao Webtoon 等是韩漫发源地的代表平台，部分作品提供官方中文翻译，更新速度最快。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🌏</span>
+                    <h3>国际平台</h3>
+                    <p>Webtoon（国际版）、Tapas、Lezhin Comics 等提供多语言服务，包含大量官方授权韩漫，支持付费抢先看。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📖</span>
+                    <h3>国内阅读渠道</h3>
+                    <p>哔哩哔哩漫画、快看漫画等平台引进了不少正版韩漫。注意部分民间汉化组作品存在版权风险，建议优先选择正规平台。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新手指南 -->
+    <section class="section section-alt" id="guide">
+        <div class="container">
+            <h2 class="section-title section-title-center">韩漫画新手指南</h2>
+            <p class="section-subtitle" style="text-align:center;">从零开始，高效找到您喜欢的韩漫。</p>
+            <div class="steps">
+                <div class="step-item">
+                    <h3>明确偏好</h3>
+                    <p>先确定喜欢的题材方向，如恋爱、悬疑、奇幻等，再结合画风筛选。</p>
+                </div>
+                <div class="step-item">
+                    <h3>参考榜单</h3>
+                    <p>查看平台日榜、周榜和编辑推荐，热门作品通常质量有保障。</p>
+                </div>
+                <div class="step-item">
+                    <h3>试读前几话</h3>
+                    <p>韩漫节奏差异大，试读能直观感受画风、翻译质量和剧情吸引力。</p>
+                </div>
+                <div class="step-item">
+                    <h3>关注完结标记</h3>
+                    <p>部分长篇连载周期长，若不喜欢追更，可优先选择已完结作品。</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 45px;">
+                <h3 style="color: #2c2850; margin-bottom: 15px;">韩漫常用术语速查</h3>
+                <div class="glossary-item">
+                    <h3>条漫 / 滚动漫画</h3>
+                    <p>以纵向长条形式呈现，适配手机屏幕，手指下滑即可阅读的漫画格式。韩漫大多采用这种形式。</p>
+                </div>
+                <div class="glossary-item">
+                    <h3>WEBTOON</h3>
+                    <p>原指韩国最大的漫画平台之一，现也泛指条漫类型的网络漫画。国内常称之为“韩漫”或“条漫”。</p>
+                </div>
+                <div class="glossary-item">
+                    <h3>分镜</h3>
+                    <p>指漫画中单格画面的构图与内容安排。韩漫的分镜强调电影感，善于用连续小格营造时间流逝或动作过程。</p>
+                </div>
+                <div class="glossary-item">
+                    <h3>等待期 / 收费话</h3>
+                    <p>部分平台采取“免费抢先看+付费提前看”模式，新一话上线后需等待一定时间才能免费阅读，急于追更可选择付费解锁。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读注意事项 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">阅读韩漫画需要注意什么？</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon">🔞</span>
+                    <h3>内容分级</h3>
+                    <p>韩漫中存在部分成人向、暴力或惊悚内容。各平台通常有明确的内容分级标识，请根据自身年龄和接受度理性选择。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👨‍👩‍👧</span>
+                    <h3>未成年人保护</h3>
+                    <p>青少年读者应尽量选择全年龄向作品，家长也可通过平台内置的青少年模式进行过滤。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💳</span>
+                    <h3>付费理性</h3>
+                    <p>追更时注意平台币消耗，合理规划阅读预算。部分作品更新较慢，避免过度消费。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">⚠️</span>
+                    <h3>版权意识</h3>
+                    <p>请通过官方或获得授权的渠道阅读，尊重创作者劳动成果，减少盗版传播。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <h2 class="section-title">关于韩漫画的常见问题</h2>
+            <p class="section-subtitle">整理读者高频疑问，帮助您快速解惑。</p>
+
+            <div class="faq-item">
+                <h3>韩漫和日漫、国漫的主要区别是什么？</h3>
+                <p>最直观的区别是阅读形式：韩漫以彩色条漫为主，日漫多为黑白页漫，国漫则两者兼有。内容风格上，韩漫更侧重情感表达和现代背景，题材选择也更贴近网络流行文化。</p>
+            </div>
+            <div class="faq-item">
+                <h3>韩漫都是彩色的吗？</h3>
+                <p>绝大多数韩漫是彩色绘制，但也有少量黑白或双色作品。彩色是韩漫的普遍特征，但并非绝对标准。</p>
+            </div>
+            <div class="faq-item">
+                <h3>韩漫一般多久更新一话？</h3>
+                <p>连载中的韩漫通常每周更新一话，部分热门作品可能一周双更。具体更新节奏取决于作者、平台和运营策略。</p>
+            </div>
+            <div class="faq-item">
+                <h3>看韩漫画需要付费吗？</h3>
+                <p>大部分平台提供免费试读或限时免费服务，但最新话与部分完结作品可能需要付费或使用平台代币解锁。具体以各平台规则为准。</p>
+            </div>
+            <div class="faq-item">
+                <h3>韩漫有官方中文翻译吗？</h3>
+                <p>有。许多韩漫通过中国平台或国际平台推出了官方中文版。不过翻译质量和更新速度参差不齐，读者可多平台比较。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关主题推荐 -->
+    <section class="section">
+        <div class="container">
+            <div class="related-panel">
+                <h3 style="color: #1e1b3a; font-size: 1.5rem; margin-bottom: 5px;">延伸阅读</h3>
+                <p style="color: #4a4665;">如果您喜欢韩漫画，以下相关主题同样值得关注：</p>
+                <div class="related-tags">
+                    <a href="#" class="related-tag">韩国条漫</a>
+                    <a href="#" class="related-tag">Webtoon推荐</a>
+                    <a href="#" class="related-tag">韩漫改编剧</a>
+                    <a href="#" class="related-tag">恋爱韩漫</a>
+                    <a href="#" class="related-tag">奇幻穿越漫</a>
+                    <a href="#" class="related-tag">悬疑惊悚漫</a>
+                    <a href="#" class="related-tag">韩漫画师</a>
+                    <a href="#" class="related-tag">漫画平台对比</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">韩漫画<span>·</span>指南</div>
+                <p style="margin-top: 8px;">为韩漫爱好者提供实用信息与阅读参考。</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">关于本站</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系合作</a>
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 韩漫画信息站 · 本页面仅供内容展示与学习交流
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
